@@ -93,22 +93,22 @@ _element_length_in_bytes(element_t* e);
 int
 _element_printf(const char* s, element_t* e);
 
-// PreProcessor_t
+// ElementPP_t
 
 element_pp_t*
-_preprocessor_new();
+_element_pp_new();
 
 void
-_preprocessor_free(element_pp_t*);
+_element_pp_free(element_pp_t*);
 
 void
-_preprocessor_init(element_pp_t*, element_t*);
+_element_pp_init(element_pp_t*, element_t*);
 
 void
-_preprocessor_pow(element_t* e, mpz_t* pow, element_pp_t*);
+_element_pp_pow(element_t* e, mpz_t* pow, element_pp_t*);
 
 void
-_preprocessor_pow_zn(element_t* e, element_t* pow, element_pp_t*);
+_element_pp_pow_zn(element_t* e, element_t* pow, element_pp_t*);
 
 void
-_preprocessor_clear(element_pp_t*);
+_element_pp_clear(element_pp_t*);
