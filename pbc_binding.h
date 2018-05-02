@@ -14,6 +14,12 @@ _integer_init(mpz_t* i);
 void
 _integer_clear(mpz_t* i);
 
+unsigned long int
+_integer_get_ui(mpz_t* i);
+
+signed long int
+_integer_get_si(mpz_t* i);
+
 void
 _integer_set_si(mpz_t* i, signed long int si);
 
@@ -62,6 +68,9 @@ _element_set_si(element_t* e, signed long si);
 
 void
 _element_pairing(element_t* out, element_t* lhs, element_t* rhs);
+
+void
+_element_to_integer(mpz_t* z, element_t* e);
 
 void
 _element_from_hash(element_t* e, void* data, int len);

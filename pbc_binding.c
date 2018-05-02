@@ -27,6 +27,18 @@ _integer_clear(mpz_t* i)
   mpz_clear(*i);
 }
 
+unsigned long int
+_integer_get_ui(mpz_t* i)
+{
+  return mpz_get_ui(*i);
+}
+
+signed long int
+_integer_get_si(mpz_t* i)
+{
+  return mpz_get_si(*i);
+}
+
 void
 _integer_set_si(mpz_t* i, signed long int si)
 {
@@ -121,6 +133,12 @@ void
 _element_pairing(element_t* out, element_t* lhs, element_t* rhs)
 {
   element_pairing(*out, *lhs, *rhs);
+}
+
+void
+_element_to_integer(mpz_t* i, element_t* e)
+{
+  element_to_mpz(*i, *e);
 }
 
 void
