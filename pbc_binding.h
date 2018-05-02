@@ -75,6 +75,30 @@ _element_sub(element_t* e0, element_t* e1, element_t* e2);
 void
 _element_mul(element_t* e0, element_t* e1, element_t* e2);
 
+void
+_element_mul_si(element_t* e0, element_t* e1, signed long si);
+
+void
+_element_mul_zn(element_t* e0, element_t* e1, element_t* e2);
+
+void
+_element_div(element_t* e0, element_t* e1, element_t* e2);
+
+void
+_element_double(element_t* e0, element_t* e1);
+
+void
+_element_halve(element_t* e0, element_t* e1);
+
+void
+_element_square(element_t* e0, element_t* e1);
+
+void
+_element_neg(element_t* e0, element_t* e1);
+
+void
+_element_invert(element_t* e0, element_t* e1);
+
 int
 _element_cmp(element_t* e0, element_t* e1);
 

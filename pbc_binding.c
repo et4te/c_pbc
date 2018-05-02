@@ -130,27 +130,80 @@ _element_from_hash(element_t* e, void* data, int len)
 }
 
 void
-_element_add(element_t* e0, element_t* e1, element_t* e2) {
+_element_add(element_t* e0, element_t* e1, element_t* e2)
+{
   element_add(*e0, *e1, *e2);
 }
 
 void
-_element_sub(element_t* e0, element_t* e1, element_t* e2) {
+_element_sub(element_t* e0, element_t* e1, element_t* e2)
+{
   element_sub(*e0, *e1, *e2);
 }
 
 void
-_element_mul(element_t* e0, element_t* e1, element_t* e2) {
+_element_mul(element_t* e0, element_t* e1, element_t* e2)
+{
   element_mul(*e0, *e1, *e2);
 }
 
+void
+_element_mul_si(element_t* e0, element_t* e1, signed long si)
+{
+  element_mul_si(*e0, *e1, si);
+}
+
+void
+_element_mul_zn(element_t* e0, element_t* e1, element_t* e2)
+{
+  element_mul_zn(*e0, *e1, *e2);
+}
+
+void
+_element_div(element_t* e0, element_t* e1, element_t* e2)
+{
+  element_div(*e0, *e1, *e2);
+}
+
+void
+_element_double(element_t* e0, element_t* e1)
+{
+  element_double(*e0, *e1);
+}
+
+void
+_element_halve(element_t* e0, element_t* e1)
+{
+  element_halve(*e0, *e1);
+}
+
+void
+_element_square(element_t* e0, element_t* e1)
+{
+  element_square(*e0, *e1);
+}
+
+void
+_element_neg(element_t* e0, element_t* e1)
+{
+  element_neg(*e0, *e1);
+}
+
+void
+_element_invert(element_t* e0, element_t* e1)
+{
+  element_invert(*e0, *e1);
+}
+
 int
-_element_cmp(element_t* e0, element_t* e1) {
+_element_cmp(element_t* e0, element_t* e1)
+{
   return element_cmp(*e0, *e1);
 }
 
 void
-_element_random(element_t* e) {
+_element_random(element_t* e)
+{
   element_random(*e);
 }
 
@@ -173,7 +226,8 @@ _element_length_in_bytes(element_t* e)
 }
 
 int
-_element_printf(const char* s, element_t* e) {
+_element_printf(const char* s, element_t* e)
+{
   return element_printf(s, *e);
 }
 
